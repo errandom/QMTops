@@ -17,6 +17,11 @@ export default defineConfig({
     createIconImportProxy() as PluginOption,
     sparkPlugin() as PluginOption,
   ],
+  preview: {
+    allowedHosts: ['qmtops.azurewebsites.net'], // Your Azure App Service hostname
+    host: true, // Bind to 0.0.0.0 so Azure can access it
+    port: 8080
+  },
   resolve: {
     alias: {
       '@': resolve(projectRoot, 'src')
