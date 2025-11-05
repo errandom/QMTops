@@ -10,7 +10,7 @@
         "lint": "eslint .",
         "optimize": "vite optimize",
         "preview": "vite preview",
-        "start": "npx vite preview --port $PORT --host"
+        "start": "serve dist --port $PORT"
     },
     "dependencies": {
         "@github/spark": "^0.39.0",
