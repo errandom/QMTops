@@ -24,9 +24,8 @@ jobs:
       - name: Build app
         run: npm run build
 
-      # Ensure Vite is in dependencies (not just devDependencies)
       - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy        uses: azure/webapps-deploy@v2
         with:
           app-name: qmtops
-          publish-profile: ${{ secrets          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
